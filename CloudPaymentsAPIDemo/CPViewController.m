@@ -19,9 +19,6 @@
 	// These values you MUST store at your server.
 	NSString *_apiPublicID;
 	NSString *_apiSecret;
-	
-	// This variable is for 3DS authorization. You MUST use your own value.
-	NSString *_termURL;
 }
 
 - (NSDictionary *)parseQueryString:(NSString *)query;
@@ -38,9 +35,6 @@
 #pragma message "These values you MUST store at your server."
 	_apiPublicID = @"pk_348c635ba69b355d6f4dc75a4a205";
 	_apiSecret = @"02a16349d37b79838a1d0310e21bd369";
-
-#pragma message "This variable is for 3DS authorization. You MUST use your own value."
-	_termURL = @"http://cloudpayments.ru/";
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,7 +112,7 @@
 
 -(void) make3DSPaymentWithAcsURLString: (NSString *) acsUrlString andPaReqString: (NSString *) paReqString andTransactionIdString: (NSString *) transactionIdString {
 	
-	NSDictionary *postParameters = @{@"MD": transactionIdString, @"TermUrl": _termURL, @"PaReq": paReqString};
+	NSDictionary *postParameters = @{@"MD": transactionIdString, @"TermUrl": @"http://cloudpayments.ru/", @"PaReq": paReqString};
 	NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST"
 																				 URLString:acsUrlString
 																				parameters:postParameters
@@ -303,7 +297,7 @@
 #pragma mark - UIWebViewDelegate implementation
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
 	NSString *urlString = [request.URL absoluteString];
-	if ([urlString isEqualToString:_termURL]) {
+	if ([urlString isEqualToString:@"http://cloudpayments.ru/"]) {
 		NSString *response = [[NSString alloc] initWithData:request.HTTPBody encoding:NSASCIIStringEncoding];
 		
 		NSDictionary *responseDictionary = [self parseQueryString:response];
