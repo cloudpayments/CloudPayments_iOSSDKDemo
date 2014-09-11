@@ -1,6 +1,11 @@
-##Disclaimer
+##Использование
 
-Работа приложения с API CloudPayments показана в демонстрационных целях. В вашем приложении, запросы должны идти на ваш сервер, а с него на API CloudPayments. Там же стоит хранить данные для подключения (PublicId и ApiSecret). Описание работы с API CloudPayments представлено на странице [http://cloudpayments.ru/Docs/Api#payWithCrypto](http://cloudpayments.ru/Docs/Api#payWithCrypto)
+Приложение CloudPayments iOS SDK Demo демонстрирует работу SDK для платформы iOS (iPhone, iPad, iPod) с платежным шлюзом [CloudPayments](http://cloudpayments.ru)
+
+Полная информация об использовании на сайте
+[www.cloudpayments.ru/docs/mobileSDK](www.cloudpayments.ru/docs/mobileSDK)
+
+##Установка
 
 Сразу после `git clone https://github.com/cloudpayments/CloudPayments_iOSSDKDemo.git`
 необходимо инициализировать и скачать подмодули git. Для этого переходим в папку с проектом
@@ -49,6 +54,11 @@ SDK CloudPayments (CloudPaymentsAPI.framework) позволяет
 	NSString *_apiPublicID = @"pk_0000000000000000000000";
 	NSString *_apiSecret = @"00000000000000000000000000000000";
 ```
+а также
+```objc
+	NSString *_termURL = @"http://your_url.com";
+```
+Параметр `_termURL` необходим для проведения 3DS авторизации платежа. Это должен быть ваш собственный адрес. Подробнее: [http://cloudpayments.ru/Docs/Api#3ds](http://cloudpayments.ru/Docs/Api#3ds)
 
 После этого необходимо инициализировать SDK CloudPayments:
 
@@ -65,8 +75,7 @@ CPService *_apiService = [[CPService alloc] init];
 
 1. В демо-приложении словарь `paramsDictionary` содержит только обязательные параметры для запроса. Список всех возможных параметров представлен [http://cloudpayments.ru/Docs/Api#payWithCrypto](http://cloudpayments.ru/Docs/Api#payWithCrypto)
 2. Метод для проведения 3DS-авторизации `-(void) make3DSPaymentWithAcsURLString: (NSString *) acsUrlString andPaReqString: (NSString *) paReqString andTransactionIdString: (NSString *) transactionIdString`
-3. Обработка ответа банка происходит в `-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {`
-4. Метод для проведения окончания 3DS-авторизации `-(void) complete3DSPaymentWithPaResString: (NSString *) paResString andTransactionIdString: (NSString *) transactionIdString`
+3. Метод для проведения окончания 3DS-авторизации `-(void) complete3DSPaymentWithPaResString: (NSString *) paResString andTransactionIdString: (NSString *) transactionIdString`
 
 
 ## Ключевые моменты
