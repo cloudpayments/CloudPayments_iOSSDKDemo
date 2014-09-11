@@ -1,0 +1,6 @@
+[submodule "CloudPaymentsAPIDemo/Libraries/AFNetworking"]
+	path = CloudPaymentsAPIDemo/Libraries/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "CloudPaymentsAPIDemo/Libraries/SVProgressHUD"]
+	path = CloudPaymentsAPIDemo/Libraries/SVProgressHUD
+	url = https://github.com/TransitApp/SVProgressHUD.git
