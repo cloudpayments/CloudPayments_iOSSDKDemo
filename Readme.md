@@ -70,7 +70,7 @@ CPService *_apiService = [[CPService alloc] init];
 
 1. В демо-приложении словарь `paramsDictionary` содержит только обязательные параметры для запроса. Список всех возможных параметров представлен [http://cloudpayments.ru/Docs/Api#payWithCrypto](http://cloudpayments.ru/Docs/Api#payWithCrypto)
 2. Метод для проведения 3DS-авторизации `-(void) make3DSPaymentWithAcsURLString: (NSString *) acsUrlString andPaReqString: (NSString *) paReqString andTransactionIdString: (NSString *) transactionIdString`
-3. Обработка ответа банка происходит в `-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {`
+3. Обработка ответа банка происходит в `-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType`
 4. Метод для проведения окончания 3DS-авторизации `-(void) complete3DSPaymentWithPaResString: (NSString *) paResString andTransactionIdString: (NSString *) transactionIdString`
 
 
