@@ -2,6 +2,19 @@
 
 Работа приложения с API CloudPayments показана в демонстрационных целях. В вашем приложении, запросы должны идти на ваш сервер, а с него на API CloudPayments. Там же стоит хранить данные для подключения (PublicId и ApiSecret). Описание работы с API CloudPayments представлено на странице [http://cloudpayments.ru/Docs/Api#payWithCrypto](http://cloudpayments.ru/Docs/Api#payWithCrypto)
 
+Сразу после `git clone https://github.com/cloudpayments/CloudPayments_iOSSDKDemo.git`
+необходимо инициализировать и скачать подмодули git. Для этого переходим в папку с проектом
+
+``` bash
+cd CloudPayments_iOSSDKDemo
+```
+а уже там:
+
+```bash
+git submodule update --init CloudPaymentsAPIDemo/Libraries/AFNetworking/
+git submodule update --init CloudPaymentsAPIDemo/Libraries/SVProgressHUD/
+```
+
 
 ##Описание работы приложения с SDK CloudPayments
 
@@ -21,9 +34,9 @@ SDK CloudPayments (CloudPaymentsAPI.framework) позволяет
 ``` objc
 	CPService *_apiService = [[CPService alloc] init];
 	NSString *cryptogramPacket = [_apiService makeCardCryptogramPacket:self.cardNumberString
-																andExpDate:self.cardExpirationDateString
-																	andCVV:self.cardCVVString
-														  andStorePublicID:_apiPublicID];
+															andExpDate:self.cardExpirationDateString
+																andCVV:self.cardCVVString
+													  andStorePublicID:_apiPublicID];
 ```
 
 Пример использования SDK и API CloudPayments дан в файле `CPViewController`
