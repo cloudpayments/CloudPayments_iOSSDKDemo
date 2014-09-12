@@ -3,7 +3,7 @@
 Приложение CloudPayments iOS SDK Demo демонстрирует работу SDK для платформы iOS (iPhone, iPad, iPod) с платежным шлюзом [CloudPayments](http://cloudpayments.ru)
 
 Полная информация об использовании на сайте
-[www.cloudpayments.ru/docs/mobileSDK](www.cloudpayments.ru/docs/mobileSDK)
+[http://cloudpayments.ru/docs/mobileSDK](http://cloudpayments.ru/docs/mobileSDK)
 
 ##Установка
 
