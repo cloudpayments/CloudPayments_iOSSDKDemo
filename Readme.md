@@ -51,8 +51,8 @@ SDK CloudPayments (CloudPaymentsAPI.framework) позволяет
 Перед началом оплаты необходимо определить переменные (их значения можно взять из личного кабинета):
 
 ``` objc
-	NSString *_apiPublicID = @"pk_0000000000000000000000";
-	NSString *_apiSecret = @"00000000000000000000000000000000";
+NSString *_apiPublicID = @"pk_0000000000000000000000";
+NSString *_apiSecret = @"00000000000000000000000000000000";
 ```
 
 После этого необходимо инициализировать SDK CloudPayments:
@@ -72,6 +72,31 @@ CPService *_apiService = [[CPService alloc] init];
 2. Метод для проведения 3DS-авторизации `-(void) make3DSPaymentWithAcsURLString: (NSString *) acsUrlString andPaReqString: (NSString *) paReqString andTransactionIdString: (NSString *) transactionIdString`
 3. Обработка ответа банка происходит в `-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType`
 4. Метод для проведения окончания 3DS-авторизации `-(void) complete3DSPaymentWithPaResString: (NSString *) paResString andTransactionIdString: (NSString *) transactionIdString`
+
+## Использование с Xcode7 и iOS9
+* Необходимо отключить ATS для всех доменов, кроме вашего сервера. Это необходимо для корректной работы шифрования при использовании 3ds-авторизации платежа. Сделать это можно в `Info.plist` файле проекта. О дополнительных настройках можно узнать тут [http://habrahabr.ru/company/e-Legion/blog/265767/](http://habrahabr.ru/company/e-Legion/blog/265767/)
+
+```xml
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>your.api.server.com</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+```
+
+* Наша библиотека пока не скомпилирована с использованием технологии App Thinning. Поэтому пока мы исправляем это, в вашем проекте генерацию биткода необходимо отключить `Проект -> Build Settings -> Enable Bitcode -> No`
+
+![Отключение биткода](doc_images/disabling_bitcode.png)
 
 
 ## Ключевые моменты
