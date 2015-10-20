@@ -35,6 +35,11 @@
 #pragma message "These values you MUST store at your server."
 	_apiPublicID = @"pk_348c635ba69b355d6f4dc75a4a205";
 	_apiSecret = @"02a16349d37b79838a1d0310e21bd369";
+    
+    NSUInteger year = 0;
+    NSUInteger month = 0;
+    
+    NSString *cardExpirationDateString = [NSString stringWithFormat:@"%02lu%02lu",(unsigned long)year%100, (unsigned long)month];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,7 +55,7 @@
 	
 	// ExpDate must be in YYMM format
 	NSArray *cardDateComponents = [self.cardExpirationDateTextField.text componentsSeparatedByString:@"/"];
-	NSString *cardExpirationDateString = [NSString stringWithFormat:@"%@%@",cardDateComponents[1],cardDateComponents[0]];
+	NSString *cardExpirationDateString = [NSString stringWithFormat:@"%@%@",cardDateComponents[1],cardDateComponents[0]];    
 	
 	// create dictionary with parameters for send
 	NSMutableDictionary *paramsDictionary = [[NSMutableDictionary alloc] init];

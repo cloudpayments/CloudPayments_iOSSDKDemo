@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C82950419DD4C87000B75A1 /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C82950319DD4C87000B75A1 /* AFNetworkActivityLogger.m */; };
 		BC01A3B619BD90FD007AD6DE /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC01A3B319BD90FD007AD6DE /* SVProgressHUD.bundle */; };
 		BC01A3B719BD90FD007AD6DE /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01A3B519BD90FD007AD6DE /* SVProgressHUD.m */; };
 		BC01A3DE19BD912B007AD6DE /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01A3BA19BD912B007AD6DE /* AFHTTPRequestOperation.m */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C82950219DD4C87000B75A1 /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
+		8C82950319DD4C87000B75A1 /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
 		BC01A3B319BD90FD007AD6DE /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		BC01A3B419BD90FD007AD6DE /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		BC01A3B519BD90FD007AD6DE /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
@@ -140,9 +143,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C82950119DD4C87000B75A1 /* AFNetworkActivityLogger */ = {
+			isa = PBXGroup;
+			children = (
+				8C82950219DD4C87000B75A1 /* AFNetworkActivityLogger.h */,
+				8C82950319DD4C87000B75A1 /* AFNetworkActivityLogger.m */,
+			);
+			name = AFNetworkActivityLogger;
+			path = AFNetworkingActivityLogger/AFNetworkActivityLogger;
+			sourceTree = "<group>";
+		};
 		BC01A2B519BD8E25007AD6DE /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				8C82950119DD4C87000B75A1 /* AFNetworkActivityLogger */,
 				BC01A3B819BD912B007AD6DE /* AFNetworking */,
 				BC01A3CC19BD912B007AD6DE /* UIKit+AFNetworking */,
 				BC01A3B119BD90FD007AD6DE /* SVProgressHUD */,
@@ -399,6 +413,7 @@
 				BC01A3EB19BD912B007AD6DE /* UIImageView+AFNetworking.m in Sources */,
 				BC01A3DE19BD912B007AD6DE /* AFHTTPRequestOperation.m in Sources */,
 				BC01A3E819BD912B007AD6DE /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				8C82950419DD4C87000B75A1 /* AFNetworkActivityLogger.m in Sources */,
 				BC63547A19BBA0860086BADF /* CPAppDelegate.m in Sources */,
 				BC01A3E419BD912B007AD6DE /* AFURLRequestSerialization.m in Sources */,
 				BC01A3E019BD912B007AD6DE /* AFHTTPSessionManager.m in Sources */,

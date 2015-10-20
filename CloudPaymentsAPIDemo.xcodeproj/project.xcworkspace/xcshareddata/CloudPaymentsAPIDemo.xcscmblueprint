@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "43C695C7051868D2C70F1309FC396AD732E53DE1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E3CA97A4D0A57AEDFA77BE925E24F5813E165E2C" : 0,
+    "43C695C7051868D2C70F1309FC396AD732E53DE1" : 0,
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0,
+    "9E1ECC80773D1F4F22D03CB4DEA298B3CB57FAF5" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C8C9A504-2848-42F8-B39D-76E178BA2910",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E3CA97A4D0A57AEDFA77BE925E24F5813E165E2C" : "CloudPayments_iOSSDKDemoCloudPaymentsAPIDemo\/Libraries\/AFNetworkingActivityLogger",
+    "43C695C7051868D2C70F1309FC396AD732E53DE1" : "CloudPayments_iOSSDKDemo",
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "CloudPayments_iOSSDKDemoCloudPaymentsAPIDemo\/Libraries\/AFNetworking",
+    "9E1ECC80773D1F4F22D03CB4DEA298B3CB57FAF5" : "CloudPayments_iOSSDKDemoCloudPaymentsAPIDemo\/Libraries\/SVProgressHUD"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CloudPaymentsAPIDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CloudPaymentsAPIDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cloudpayments\/CloudPayments_iOSSDKDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "43C695C7051868D2C70F1309FC396AD732E53DE1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TransitApp\/SVProgressHUD.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9E1ECC80773D1F4F22D03CB4DEA298B3CB57FAF5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AFNetworking\/AFNetworking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AFNetworking\/AFNetworkActivityLogger",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E3CA97A4D0A57AEDFA77BE925E24F5813E165E2C"
+    }
+  ]
+}
