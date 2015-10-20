@@ -130,7 +130,7 @@
 															 error:&error];
 	
 	
-	if ([response statusCode] == 200) {
+	if ([response statusCode] == 200 || [response statusCode] == 201) {
 		[SVProgressHUD dismiss];
 		UIWebView *webView=[[UIWebView alloc] initWithFrame:self.view.frame];
 		webView.delegate = self;
