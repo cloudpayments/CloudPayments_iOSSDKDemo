@@ -123,6 +123,8 @@
 																				parameters:postParameters
 																					 error:nil];
 	
+	[request setValue:@"ru;q=1, en;q=0.9" forHTTPHeaderField:@"Accept-Language"];
+	
 	NSHTTPURLResponse *response;
 	NSError *error;
 	NSData *responseData = [NSURLConnection sendSynchronousRequest:request
