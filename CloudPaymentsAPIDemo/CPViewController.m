@@ -156,7 +156,7 @@
 	[paramsDictionary setObject:paResString forKey:@"PaRes"];
 	[paramsDictionary setObject:transactionIdString forKey:@"TransactionId"];
 	
-	NSString *apiURLString = @"https://api.cloudpayments.ru/payments/post3ds";
+	NSString *apiURLString = @"https://api.cloudpayments.ru/payments/mobile/cards/post3ds";
 	
 	// setup AFHTTPRequestOperationManager HTTP BasicAuth and serializers
 	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
