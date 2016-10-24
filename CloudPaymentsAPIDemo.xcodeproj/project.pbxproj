@@ -96,6 +96,7 @@
 		BC01A3DB19BD912B007AD6DE /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		BC01A3DC19BD912B007AD6DE /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		BC01A3DD19BD912B007AD6DE /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		BC62D77C1DBE38AF0026B693 /* CloudPaymentsAPIDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudPaymentsAPIDemo.entitlements; sourceTree = "<group>"; };
 		BC63546619BBA0860086BADF /* CloudPaymentsAPIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudPaymentsAPIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC63546919BBA0860086BADF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BC63546B19BBA0860086BADF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -236,6 +237,7 @@
 				BC63546719BBA0860086BADF /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		BC63546719BBA0860086BADF /* Products */ = {
 			isa = PBXGroup;
@@ -261,6 +263,7 @@
 		BC63546F19BBA0860086BADF /* CloudPaymentsAPIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BC62D77C1DBE38AF0026B693 /* CloudPaymentsAPIDemo.entitlements */,
 				BC01A2B519BD8E25007AD6DE /* Libraries */,
 				BC63547819BBA0860086BADF /* CPAppDelegate.h */,
 				BC63547919BBA0860086BADF /* CPAppDelegate.m */,
@@ -350,6 +353,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "CloudPayments LLC";
 				TargetAttributes = {
+					BC63546519BBA0860086BADF = {
+						DevelopmentTeam = WCLAYYKMWP;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
 					BC63548619BBA0860086BADF = {
 						TestTargetID = BC63546519BBA0860086BADF;
 					};
@@ -548,7 +559,9 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = CloudPaymentsAPIDemo/CloudPaymentsAPIDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = WCLAYYKMWP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -572,7 +585,9 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = CloudPaymentsAPIDemo/CloudPaymentsAPIDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				DEVELOPMENT_TEAM = WCLAYYKMWP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

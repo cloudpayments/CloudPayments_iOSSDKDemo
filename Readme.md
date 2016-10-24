@@ -106,6 +106,20 @@ CPService *_apiService = [[CPService alloc] init];
 
 В симуляторе данная ошибка не возникает
 
+## Использование с Xcode8 и ios10
+
+* При тестировании на симуляторе ios10, возникает ошибка `EXC_BAD_ACCESS`. Она происходит по причине неправильной обработки загрузки ключей в симуляторе ios10.
+
+См. тут [https://openradar.appspot.com/27422249](https://openradar.appspot.com/27422249) и [https://forums.developer.apple.com/message/179846](https://forums.developer.apple.com/message/179846)
+
+Простое решение - для тестирования включить Keychain Sharing.
+
+![Включение Keychain sharing](doc_images/enabling_keychain_sharing.png)
+
+С включением этой опции приложение в симуляторе начинает работать корректно.
+
+На реальных устройствах данная ошибка не возникает.
+
 ## Ключевые моменты
 1. Библиотека поставляется в виде .framework, который скомпилирован для трех текущих архитектур процессора armv7, armv7s, arm64 и i385, x86_64. Таким образом тестировать можно в iPhone Simulator. Библиотека может работать только в версиях  iOS 6.0+. iOS 8 также поддерживается.
 2. В демо-проекте для сетевого взаимодействия используется библиотека AFNetworing (см. [https://github.com/AFNetworking/AFNetworking](https://github.com/AFNetworking/AFNetworking)). Все права на код этой библиотеки принадлежат авторам библиотеки.

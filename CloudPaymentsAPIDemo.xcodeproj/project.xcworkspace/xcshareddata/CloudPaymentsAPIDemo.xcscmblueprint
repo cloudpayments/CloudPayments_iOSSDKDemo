@@ -11,10 +11,10 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C8C9A504-2848-42F8-B39D-76E178BA2910",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "E3CA97A4D0A57AEDFA77BE925E24F5813E165E2C" : "CloudPayments_iOSSDKDemoCloudPaymentsAPIDemo\/Libraries\/AFNetworkingActivityLogger",
-    "43C695C7051868D2C70F1309FC396AD732E53DE1" : "CloudPayments_iOSSDKDemo",
-    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "CloudPayments_iOSSDKDemoCloudPaymentsAPIDemo\/Libraries\/AFNetworking",
-    "9E1ECC80773D1F4F22D03CB4DEA298B3CB57FAF5" : "CloudPayments_iOSSDKDemoCloudPaymentsAPIDemo\/Libraries\/SVProgressHUD"
+    "E3CA97A4D0A57AEDFA77BE925E24F5813E165E2C" : "CloudPayments_iOSSDKDemo\/CloudPaymentsAPIDemo\/Libraries\/AFNetworkingActivityLogger\/",
+    "43C695C7051868D2C70F1309FC396AD732E53DE1" : "CloudPayments_iOSSDKDemo\/",
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "CloudPayments_iOSSDKDemo\/CloudPaymentsAPIDemo\/Libraries\/AFNetworking\/",
+    "9E1ECC80773D1F4F22D03CB4DEA298B3CB57FAF5" : "CloudPayments_iOSSDKDemo\/CloudPaymentsAPIDemo\/Libraries\/SVProgressHUD\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CloudPaymentsAPIDemo",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
